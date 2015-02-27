@@ -3,15 +3,20 @@
 # 1) Write a function that takes a number of years and converts it to the number of seconds (assume 365 days in a year)
 
 def years_to_seconds(years)
-  # ... your code here ...
+  days_in_year = 365
+  hours_in_day = 24
+  minutes_in_hour = 60
+  seconds_in_minute = 60
+
+  years * days_in_year * hours_in_day * minutes_in_hour * seconds_in_minute
 end
 
-puts "Problem 1: " + (years_to_seconds(5) == 157680000).to_s
+puts "Problem 1: " + (years_to_seconds(1) == 31536000).to_s
 
 # 2) Write a function that reverses a word and capitalizes the reversed word correctly:
 
 def capital_rev(word)
-  # ... your code here ...
+  word.reverse.capitalize
 end
 
 puts "Problem 2: " + (capital_rev("Hello") == "Olleh").to_s
@@ -19,7 +24,7 @@ puts "Problem 2: " + (capital_rev("Hello") == "Olleh").to_s
 # 3) Write a function that takes a sentence and reverses the order of the words and capitalizes the sentence correctly:
 
 def reverse_sentence(sentence)
-  # ... your code here ...
+  sentence.split.reverse.join(" ").capitalize
 end
 
 puts "Problem 3: " + (reverse_sentence("The cat jumps over the dog") == "Dog the over jumps cat the").to_s
